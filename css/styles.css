@@ -1,0 +1,128 @@
+@import url("variables.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text-color);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.header-line {
+  background-color: var(--primary-blue);
+  height: 1.5rem;
+  width: 100%;
+}
+
+header {
+  background-color: var(--bg-color);
+}
+
+.global-x-padding {
+  padding-left: 12.5rem;
+  padding-right: 12.5rem;
+}
+
+.welcome {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.welcome figure {
+  margin-top: 4.25rem;
+  padding-left: 12.5rem;
+}
+
+.welcome-content {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.welcome-text {
+  padding-top: 7.5rem;
+  position: relative;
+  z-index: 10;
+  left: 12.5rem;
+  width: 32%;
+}
+
+.welcome-image-container {
+  position: relative;
+  z-index: 5;
+  bottom: 3.5rem;
+  width: 100%;
+  height: auto;
+  max-width: 100rem;
+}
+.welcome-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.welcome-text h1 {
+  font-size: 3rem;
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.welcome-text p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1280px) {
+  .welcome figure {
+    margin-top: 1rem;
+    padding-left: 2rem;
+  }
+
+  .welcome-text {
+    padding-top: 4rem;
+    left: 2rem;
+    width: 50%;
+  }
+
+  .welcome-text h1 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .welcome-image-container {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-line {
+    height: 0.75rem;
+  }
+  .welcome-content {
+    flex-direction: column;
+  }
+
+  .welcome-image-container {
+    width: 100%;
+    order: 1;
+  }
+
+  .welcome-text {
+    width: 100%;
+    order: 2;
+    margin-top: 0;
+    padding-top: 0;
+    left: 0;
+    padding: 0.75rem;
+  }
+  .welcome-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-text p {
+    font-size: 1rem;
+  }
+}
