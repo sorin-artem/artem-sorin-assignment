@@ -74,11 +74,9 @@ main {
 }
 
 .welcome-text h1 {
-  font-size: 3rem;
   display: block;
   width: 100%;
   margin-bottom: 1.5rem;
-  text-transform: uppercase;
 }
 
 .welcome-text p {
@@ -216,9 +214,6 @@ main {
   margin-top: 4rem;
 }
 
-.how-we-choose h1 {
-  font-size: 3rem;
-}
 .how-we-choose h1:last-of-type {
   margin-bottom: 1.5rem;
 }
@@ -265,6 +260,21 @@ main {
 
 .criterion:first-child .criterion-text {
   border-top: 2px solid var(--light-grey);
+}
+
+.security {
+  margin-top: 9rem;
+}
+
+.security p {
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+  display: block;
+}
+
+.section-heading {
+  font-size: 3rem;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1280px) {
@@ -328,11 +338,39 @@ main {
     font-size: 1rem;
   }
 
+  .offers {
+    margin-bottom: 3.75rem;
+  }
+
+  .how-we-choose {
+    margin-top: 1.5rem;
+  }
+
+  .how-we-choose p {
+    font-size: 1rem;
+  }
+
+  .criteria {
+    margin-top: 1.5rem;
+  }
+
   .criterion-plus {
     display: none;
   }
 
   .criterion-text {
     width: 100%;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .security p {
+    font-size: 1rem;
+  }
+
+  .security {
+    margin-top: 1.5rem;
   }
 }
