@@ -89,6 +89,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  margin-bottom: 5rem;
 }
 
 @media (max-width: 1024px) {
@@ -211,6 +212,61 @@ main {
   font-size: 1.5rem;
 }
 
+.how-we-choose {
+  margin-top: 4rem;
+}
+
+.how-we-choose h1 {
+  font-size: 3rem;
+}
+.how-we-choose h1:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.how-we-choose p {
+  font-size: 1.5rem;
+}
+
+.criteria {
+  margin-top: 3.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.criterion-plus {
+  font-size: 3rem;
+  color: var(--light-grey);
+}
+
+.divider {
+  border: 1px solid var(--light-grey);
+}
+
+.criterion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.criterion:hover {
+  background-color: var(--hover-grey);
+}
+
+.criterion-text {
+  width: 70%;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--light-grey);
+  padding: 1.5rem 0;
+}
+
+.criterion:last-child .criterion-text {
+  border-bottom: none;
+}
+
+.criterion:first-child .criterion-text {
+  border-top: 2px solid var(--light-grey);
+}
+
 @media (max-width: 1280px) {
   .global-x-padding {
     padding-left: 4rem;
@@ -270,5 +326,13 @@ main {
 
   .welcome-text p {
     font-size: 1rem;
+  }
+
+  .criterion-plus {
+    display: none;
+  }
+
+  .criterion-text {
+    width: 100%;
   }
 }
