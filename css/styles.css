@@ -8,6 +8,15 @@
 
 body {
   color: var(--text-color);
+  font-family: "Manrope", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Space Grotesk", sans-serif;
 }
 
@@ -17,7 +26,8 @@ body {
   width: 100%;
 }
 
-header {
+header,
+main {
   background-color: var(--bg-color);
 }
 
@@ -75,7 +85,138 @@ header {
   font-size: 1.5rem;
 }
 
+.offers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .offers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .offers {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: var(--dark-grey);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  justify-content: space-between;
+}
+
+.badge {
+  background-color: var(--badge-bg);
+  color: var(--text-color);
+  font-size: 0.75rem;
+  padding: 0.375rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.logo {
+  width: 100%;
+  height: 7rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0.5rem 0;
+}
+
+.logo.betano {
+  background-image: url("../images/betano.png");
+}
+
+.logo.sportingbet {
+  background-image: url("../images/sportingbet.png");
+}
+
+.logo.bet365 {
+  background-image: url("../images/bet365.png");
+}
+
+.logo.superbet {
+  background-image: url("../images/superbet.png");
+}
+
+.logo.novibet {
+  background-image: url("../images/novibet.png");
+}
+
+.logo.betnacional {
+  background-image: url("../images/betnacional.png");
+}
+
+.card ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+.card ul li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.card ul li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
+
+.card .rating {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 1rem;
+  background-color: var(--light-grey);
+  padding: 0.5rem;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.star-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.card button {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+.card button:hover {
+  background-color: var(--button-hover);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+}
+
 @media (max-width: 1280px) {
+  .global-x-padding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .welcome figure {
     margin-top: 1rem;
     padding-left: 2rem;
@@ -98,6 +239,11 @@ header {
 }
 
 @media (max-width: 768px) {
+  .global-x-padding {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .header-line {
     height: 0.75rem;
   }

@@ -1,8 +1,17 @@
 :root {
-    /* Colors */
-    --primary-blue: #0075FF;
-    
-    /* Theme variables */
-    --bg-color: #000000;
-    --text-color: #ffffff;
-} 
+  /* Colors */
+  --primary-blue: #0075ff;
+  --secondary-blue: #0056b3;
+  --success-green: #3ccd39;
+  --dark-grey: #181717;
+  --light-grey: #211f1e;
+  --bg-color: #000000;
+  --text-color: #ffffff;
+
+  /* Theme variables */
+  --card-bg: var(--dark-grey);
+  --rating-bg: var(--light-grey);
+  --button-bg: var(--primary-blue);
+  --button-hover: var(--secondary-blue);
+  --badge-bg: var(--success-green);
+}
