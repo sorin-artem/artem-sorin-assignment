@@ -5,12 +5,16 @@
   --success-green: #3ccd39;
   --dark-grey: #181717;
   --light-grey: #302e2d;
-  --bg-color: #0d0d0d;
-  --text-color: #ffffff;
+  --light-grey-2: #302e2d;
+  --light-grey-3: #abaaaa;
+  --black: #0d0d0d;
+  --white: #ffffff;
 
   /* Theme variables */
-  --card-bg: var(--dark-grey);
-  --rating-bg: var(--light-grey);
+  --bg-color: var(--black);
+  --text-color: var(--white);
+  --card-bg: var(--light-grey);
+  --rating-bg: var(--light-grey-2);
   --button-bg: var(--primary-blue);
   --button-hover: var(--secondary-blue);
   --badge-bg: var(--success-green);
