@@ -20,6 +20,10 @@ h6 {
   font-family: "Space Grotesk", sans-serif;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 .header-line {
   background-color: var(--primary-blue);
   height: 1.5rem;
