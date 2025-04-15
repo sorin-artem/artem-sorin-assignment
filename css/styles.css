@@ -35,6 +35,14 @@ main {
   background-color: var(--bg-color);
 }
 
+header {
+  border-bottom: 2px solid var(--black);
+}
+
+main {
+  border-top: 1px solid var(--black);
+}
+
 .global-x-padding {
   padding-left: 12.5rem;
   padding-right: 12.5rem;
@@ -105,6 +113,10 @@ main {
   align-items: center;
 }
 
+.bonuses-title {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .offers {
     grid-template-columns: repeat(2, 1fr);
@@ -115,13 +127,18 @@ main {
   .offers {
     grid-template-columns: 1fr;
   }
+  .bonuses-title {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+  }
 }
 
 .card {
   border: 1px solid var(--light-grey-2);
   background-color: var(--dark-grey);
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 0.75rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -146,12 +163,18 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   margin: 0.5rem 0;
+  border-radius: 0.5rem;
 }
 
 .logo.betano {
   background-image: url("../images/betano.png");
 }
 
+.card .rating-text {
+  color: var(--light-grey-3);
+  text-decoration: underline;
+  text-decoration-thickness: 1%;
+}
 .logo.sportingbet {
   background-image: url("../images/sportingbet.png");
 }
@@ -183,7 +206,7 @@ main {
 }
 
 .card ul li::before {
-  content: "-";
+  content: "—";
   position: absolute;
   left: 0;
 }

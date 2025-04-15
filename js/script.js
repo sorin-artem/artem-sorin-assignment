@@ -3,31 +3,38 @@ import { getHowWeChooseData } from "./howWeChooseData.js";
 import { getSecurityData } from "./securityData.js";
 
 const renderOffers = () => {
-  const offersSection = document.querySelector(".offers");
+  const offersSection = document.querySelector(".bonuses");
   offersSection.classList.add("loading");
   const offersData = getOffersData();
 
   setTimeout(() => {
     offersSection.classList.remove("loading");
-    offersSection.innerHTML = offersData
-      .map(
-        (offer) => `
-    <article class="card">
-      <span class="badge">${offer.badge}</span>
-      <div class="logo ${offer.logo}"></div>
-      <h2>${offer.title}</h2>
-      <ul>
-        ${offer.features.map((feature) => `<li>${feature}</li>`).join("")}
-      </ul>
-      <div class="rating">
-        <img src="images/Star.svg" alt="star" class="star-icon" /> 
-        ${offer.rating} Avaliações (${offer.reviews})
+    offersSection.innerHTML = `
+      <h1 class="bonuses-title">Bonuses 9</h1>
+      <div class="offers">
+        ${offersData
+          .map(
+            (offer) => `
+          <article class="card">
+            <span class="badge">${offer.badge}</span>
+            <div class="logo ${offer.logo}"></div>
+            <h2>${offer.title}</h2>
+            <ul>
+              ${offer.features.map((feature) => `<li>${feature}</li>`).join("")}
+            </ul>
+            <div class="rating">
+              <img src="images/Star.svg" alt="star" class="star-icon" /> 
+              ${offer.rating} <span class="rating-text">Avaliações (${
+              offer.reviews
+            })</span>
+            </div>
+            <button>Receber Bônus</button>
+          </article>
+        `
+          )
+          .join("")}
       </div>
-      <button>Receber Bônus</button>
-    </article>
-  `
-      )
-      .join("");
+    `;
   }, 1000);
 };
 
