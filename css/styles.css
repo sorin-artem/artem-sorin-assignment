@@ -376,7 +376,7 @@ footer {
 
   .welcome img.welcome-logo {
     margin-top: 1rem;
-    padding-left: 2rem;
+    padding-left: 4rem;
   }
 
   .welcome-text {
@@ -404,6 +404,11 @@ footer {
   .header-line {
     height: 0.75rem;
   }
+
+  .welcome img.welcome-logo {
+    padding-left: 0.75rem;
+  }
+
   .welcome-content {
     flex-direction: column;
   }
