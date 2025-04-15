@@ -43,7 +43,7 @@ main {
 .welcome {
   padding-top: 2rem;
 }
-.welcome img {
+.welcome img.welcome-logo {
   margin-top: 4.25rem;
   padding-left: 12.5rem;
 }
@@ -374,14 +374,14 @@ footer {
     padding-right: 4rem;
   }
 
-  .welcome img {
+  .welcome img.welcome-logo {
     margin-top: 1rem;
     padding-left: 2rem;
   }
 
   .welcome-text {
     padding-top: 4rem;
-    left: 2rem;
+    left: 4rem;
     width: 50%;
   }
 
