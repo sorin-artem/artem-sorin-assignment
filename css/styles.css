@@ -43,7 +43,7 @@ main {
 .welcome {
   padding-top: 2rem;
 }
-.welcome figure {
+.welcome img {
   margin-top: 4.25rem;
   padding-left: 12.5rem;
 }
@@ -95,6 +95,14 @@ main {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-bottom: 5rem;
+  min-height: 200px;
+  position: relative;
+}
+
+.offers.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1024px) {
@@ -220,6 +228,14 @@ main {
 
 .how-we-choose {
   margin-top: 4rem;
+  min-height: 200px;
+  position: relative;
+}
+
+.how-we-choose.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .how-we-choose h1:last-of-type {
@@ -269,6 +285,14 @@ main {
 .security {
   margin-top: 9rem;
   padding-bottom: 7rem;
+  min-height: 200px;
+  position: relative;
+}
+
+.security.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .security p {
@@ -350,7 +374,7 @@ footer {
     padding-right: 4rem;
   }
 
-  .welcome figure {
+  .welcome img {
     margin-top: 1rem;
     padding-left: 2rem;
   }
@@ -487,5 +511,28 @@ footer {
 
   .footer-icons img.begambleaware {
     max-width: 8.5rem;
+  }
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--light-grey);
+  border-bottom-color: var(--primary-blue);
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
